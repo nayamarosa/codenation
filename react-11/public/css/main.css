@@ -27,7 +27,7 @@ a {
 }
 
 .container {
-	width: 80%;
+	width: 75%;
 	margin: 0 auto;
 }
 
@@ -59,25 +59,27 @@ a {
 }
 
 .main-banner {
-    height: 1080px;
-	background-image: url('../img/capa-madmax2.jpg');
+	height: 90vh;
+    background-image: url(../img/capa-madmax2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .main-banner-text {
 	position: relative;
-	top: 570px;
+	top: 30vh;
 	color: #ffffff;
 }
 
 .main-banner-text h2 {
-	margin-bottom: 30px;
-	font-size: 75px;
+	margin-bottom: 20px;
+	font-size: 65px;
 	font-weight: 700;
 }
 
 .main-banner-text-list {
 	display: flex;
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 }
 
 .main-banner-text-list li {
@@ -86,7 +88,7 @@ a {
 
 .btn-trailler {
 	display: inline-block;
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 	padding: 10px 50px;
 	background-color: #e4bb23;
 	color: #000000;
@@ -94,6 +96,6 @@ a {
 }
 
 .main-banner-text p:last-child {
-	margin-top: 15px;
+	margin-top: 10px;
 	color: #e4bb23;
 }
