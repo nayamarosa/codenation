@@ -37,7 +37,7 @@ a {
 	margin: 20px 0;
 }
 
-.header-nav, .header-nav ul, .header-user {
+.header-nav, .header-nav ul, .header-user, .card-fav {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -60,7 +60,7 @@ a {
 
 .main-banner {
 	height: 90vh;
-    background-image: url(../img/capa-madmax2.jpg);
+    background-image: url('../img/capa-madmax2.jpg');
     background-size: cover;
     background-attachment: fixed;
 }
@@ -112,4 +112,33 @@ a {
 	margin: 0 20px;
 	color: #e4bb23;
 	font-weight: 700;
+}
+
+.card-list {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.card {
+	width: 24%;
+	margin-bottom: 15px;
+	overflow: hidden;
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+}
+
+
+
+.card img {
+	width: 100%;
+}
+
+.card-text {
+	padding: 10px;
+}
+
+.card-text > p {
+	margin: 10px 0;
+	color: #e4bb23;
 }
