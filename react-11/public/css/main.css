@@ -37,7 +37,7 @@ a {
 	margin: 20px 0;
 }
 
-.header-nav, .header-nav ul, .header-user, .card-fav {
+.header-nav, .header-nav ul, .header-user, .card-fav, .footer {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -100,10 +100,15 @@ a {
 	color: #e4bb23;
 }
 
+.main {
+	padding: 20px 0 35px;
+	background-color: #f2f2f2;
+}
+
 .main-nav-list {
 	display: flex;
 	justify-content: center;
-	margin: 20px 0;
+	margin-bottom: 20px;
 	padding-bottom: 20px;
 	border-bottom: 1px solid #cccccc;
 }
@@ -128,8 +133,6 @@ a {
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
 }
 
-
-
 .card img {
 	width: 100%;
 }
@@ -141,4 +144,15 @@ a {
 .card-text > p {
 	margin: 10px 0;
 	color: #e4bb23;
+}
+
+.footer-social {
+	display: flex;
+	margin: 40px 0;
+}
+
+.footer-social li {
+	margin-left: 20px;
+	color: #cccccc;
+	font-size: 25px;
 }
