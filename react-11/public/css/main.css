@@ -250,3 +250,19 @@ a {
 	color: #cccccc;
 	font-size: 25px;
 }
+
+.footer-social li a {
+	transition: 0.2s ease-in-out;
+}
+
+.twitter a:hover {
+	color: #55acee;
+}
+
+.facebook a:hover {
+	color: #3b5998;
+}
+
+.instagram a:hover {
+	color: #e95950;
+}
