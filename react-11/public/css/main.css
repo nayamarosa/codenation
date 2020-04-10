@@ -46,16 +46,20 @@ a {
 .header-list li {
 	margin: 0 20px;
 	color: #ffffff;
+	font-size: 14px;
+	font-weight: 700;
 }
 
 .header-user img {
-	width: 50px;
+	width: 45px;
 	margin-right: 10px;
 	border-radius: 50%;
 }
 
 .header-user p {
 	color: #ffffff;
+	font-size: 14px;
+	font-weight: 700;
 }
 
 .main-banner {
@@ -77,6 +81,10 @@ a {
 	font-weight: 700;
 }
 
+.main-banner-text p {
+	font-size: 14px;
+}
+
 .main-banner-text-list {
 	display: flex;
 	margin-bottom: 20px;
@@ -84,15 +92,22 @@ a {
 
 .main-banner-text-list li {
 	margin-right: 10px;
+	font-size: 14px;
 }
 
 .btn-trailler {
 	display: inline-block;
 	margin-bottom: 20px;
-	padding: 10px 50px;
+	padding: 15px 20px 15px 50px;
 	background-color: #e4bb23;
 	color: #000000;
+	font-size: 14px;
 	border-radius: 50px;
+}
+
+.btn-trailler i {
+	margin-left: 15px;
+	font-size: 20px;
 }
 
 .main-banner-text p:last-child {
@@ -116,6 +131,7 @@ a {
 .main-nav-list li {
 	margin: 0 20px;
 	color: #e4bb23;
+	font-size: 13px;
 	font-weight: 700;
 }
 
@@ -144,6 +160,16 @@ a {
 .card-text > p {
 	margin: 10px 0;
 	color: #e4bb23;
+	font-size: 13px;
+}
+
+.card-fav p {
+	font-weight: 700;
+}
+
+.card-fav i {
+	color: #cccccc;
+	font-size: 20px;
 }
 
 .footer-social {
