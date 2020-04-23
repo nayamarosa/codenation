@@ -8,6 +8,7 @@
 
 body {
 	background-color: #fafafa;
+	font-family: "Open Sans", sans-serif;
 	color: #333333;
 }
 
@@ -18,6 +19,10 @@ ul, li {
 
 h1, h2, h3, h4, h5, h6, p {
 	margin: 0;
+}
+
+p {
+	font-size: 12px;
 }
 
 li {
@@ -31,6 +36,7 @@ a {
 
 .container {
 	display: flex;
+	align-items: center;
 	width: 90%;
 	margin: 0 auto;
 }
@@ -42,7 +48,6 @@ a {
 
 .header .container {
 	justify-content: space-between;
-	align-items: center;
 	padding: 8px 0;
 }
 
@@ -55,7 +60,8 @@ a {
 }
 
 .header__icon, .feed__icon {
-    font-size: 16px;
+	font-size: 16px;
+	margin: 0 8px;
 }
 
 .stories {
@@ -67,7 +73,7 @@ a {
 }
 
 .stories__list-item {
-	width: 22%;
+	width: 20%;
 	margin-right: 25px;
 }
 
@@ -90,7 +96,7 @@ a {
 }
 
 .feed {
-
+	margin: 16px 0;
 }
 
 .feed__list {
@@ -98,42 +104,58 @@ a {
 }
 
 .feed__list-item {
-	
+	background-color: #ffffff;
+	border: 1px solid rgba(0, 0, 0, .1);
+	border-radius: 8px;
+}
+
+.feed__list-item-header, .feed__list-item-interact {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 
 .feed__list-item-header {
-	display: flex;
-	align-items: center;
+	padding: 8px;
 }
 
-.feed__profile {
+.feed__profile, .feed__list-item-footer {
 	display: flex;
 	align-items: center;
 }
 
 .feed__profile-image {
 	width: 16%;
+	margin-right: 8px;
 	border-radius: 50%;
 }
 
-.feed__profile-name {
-
+.feed__profile-name, .feed__like-text--bold {
+	font-weight: 700;
 }
 
 .feed__list-item-image {
-
+	display: block;
+	width: 100%;
 }
 
-.feed_list-item-interact {
+.feed__list-item-interact {
+	padding: 12px 8px;
+}
 
+.feed__icon--bigger {
+	font-size: 25px;
 }
 
 .feed__list-item-footer {
-
+	padding: 8px;
+	background-color: rgba(0, 0, 0, 0.05);
 }
 
 .feed__like-image {
-
+	width: 10%;
+	margin-right: 8px;
+	border-radius: 50%;
 }
 
 .feed__like-text {
