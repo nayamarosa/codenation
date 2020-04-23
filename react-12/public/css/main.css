@@ -52,37 +52,34 @@ a {
     font-size: 20px;
 }
 
-.history {
+.stories {
 	padding: 15px 20px;
 }
 
-.history__list {
+.stories__list {
 	display: flex;
 	align-items: center;
 }
 
-.history__list-item {
+.stories__list-item {
 	width: 22%;
 	margin-right: 25px;
 }
 
-.history__list-item:last-child {
+.stories__list-item:last-child {
 	margin-right: 0;
 }
 
-.history__list-item-image {
+.stories__list-item-image {
 	display: block;
 	width: 100%;
 	border-radius: 50%;
-	box-sizing: content-box;
 }
 
-.history__list-item-image--border {
-	border: 3px solid transparent;
-	padding: 1px;
+.stories__list-item-image--border {
+	
 }
 
-.history__list-item-image--border-color {
-	border: 5px solid #333333;
-	padding: 3px;
+.stories__list-item-image--border-color {
+	
 }
