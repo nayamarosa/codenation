@@ -7,7 +7,7 @@
 }
 
 body {
-	background-color: #f0f0f0;
+	background-color: #fafafa;
 	color: #333333;
 }
 
@@ -29,15 +29,21 @@ a {
 	color: inherit;
 }
 
-.header {
+.container {
 	display: flex;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.header {
+	background-color: #ffffff;
+	box-shadow: 0 1px 0 rgba(0, 0, 0, .1);
+}
+
+.header .container {
 	justify-content: space-between;
 	align-items: center;
-	width: 100%;
-	/* height: 100px; */
-	padding: 15px 20px;
-	background-color: #ffffff;
-	border-bottom: 1px solid #cccccc;
+	padding: 8px 0;
 }
 
 .header__logo {
@@ -49,16 +55,15 @@ a {
 }
 
 .header__icon, .feed__icon {
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .stories {
-	padding: 15px 20px;
+	padding: 16px 0;
 }
 
 .stories__list {
 	display: flex;
-	align-items: center;
 }
 
 .stories__list-item {
@@ -82,4 +87,59 @@ a {
 
 .stories__list-item-image--border-color {
 	
+}
+
+.feed {
+
+}
+
+.feed__list {
+
+}
+
+.feed__list-item {
+	
+}
+
+.feed__list-item-header {
+	display: flex;
+	align-items: center;
+}
+
+.feed__profile {
+	display: flex;
+	align-items: center;
+}
+
+.feed__profile-image {
+	width: 16%;
+	border-radius: 50%;
+}
+
+.feed__profile-name {
+
+}
+
+.feed__list-item-image {
+
+}
+
+.feed_list-item-interact {
+
+}
+
+.feed__list-item-footer {
+
+}
+
+.feed__like-image {
+
+}
+
+.feed__like-text {
+
+}
+
+.feed__like-text--bold {
+
 }

@@ -12,51 +12,53 @@
 	<link rel="stylesheet" href="css/main.css" />
 </head>
 <body>
-
+	
 	<header class="header">
-		<h1 class="header__logo">
-			<img class="header__logo-image" src="./img/instagram-logo.svg" alt="Instagram"/>
-		</h1>
-		<a href="#">
-			<i class="header__icon far fa-paper-plane"></i>
-		</a>
+		<div class="container">
+			<h1 class="header__logo">
+				<img class="header__logo-image" src="./img/instagram-logo.svg" alt="Instagram"/>
+			</h1>
+			<a href="#">
+				<i class="header__icon far fa-paper-plane"></i>
+			</a>
+		</div>
 	</header>
 	
 	<section class="stories">
-		<ul class="stories__list">
-			<li class="stories__list-item">
-				<a href="#">
-					<img class="stories__list-item-image stories__list-item-image--border"  src="./img/profiles/yoda/yoda-profile.jpg" alt="Mestre Yoda"/>
-				</a>
-			</li>
-			<li class="stories__list-item">
-				<a href="#">
-					<img class="stories__list-item-image stories__list-item-image--border stories__list-item-image--border-color"  src="./img/profiles/gamora/gamora-profile.jpg" alt="Gamora Zen"/>
-				</a>
-			</li>
-			<li class="stories__list-item">
-				<a href="#">
-					<img class="stories__list-item-image stories__list-item-image--border"  src="./img/profiles/black-panther/black-panther-profile.jpg" alt="T'Challa"/>
-				</a>
-			</li>
-		</ul>
+		<div class="container">
+			<ul class="stories__list">
+				<li class="stories__list-item">
+					<a href="#">
+						<img class="stories__list-item-image stories__list-item-image--border"  src="./img/profiles/yoda/yoda-profile.jpg" alt="Mestre Yoda"/>
+					</a>
+				</li>
+				<li class="stories__list-item">
+					<a href="#">
+						<img class="stories__list-item-image stories__list-item-image--border stories__list-item-image--border-color"  src="./img/profiles/gamora/gamora-profile.jpg" alt="Gamora Zen"/>
+					</a>
+				</li>
+				<li class="stories__list-item">
+					<a href="#">
+						<img class="stories__list-item-image stories__list-item-image--border"  src="./img/profiles/black-panther/black-panther-profile.jpg" alt="T'Challa"/>
+					</a>
+				</li>
+			</ul>
+		</div>
 	</section>
 	
 	<main class="feed">
 		<ul class="feed_list">
-			<li class="feed_list-item">
+			<li class="feed__list-item">
 				<div class="feed__list-item-header">
-					<div class="feed__profile">
-						<a href="#">
-							<img class="feed__profile-image" src="./img/profiles/yoda/yoda-profile.jpg" alt="Mestre Yoda"/>
-							<p class="feed__profile-name">Mestre Yoda</p>
-						</a>
-					</div>
+					<a class="feed__profile" href="#">
+						<img class="feed__profile-image" src="./img/profiles/yoda/yoda-profile.jpg" alt="Mestre Yoda"/>
+						<p class="feed__profile-name">Mestre Yoda</p>
+					</a>
 					<a href="#">
 						<i class="feed__icon fas fa-ellipsis-h"></i>
 					</a>
 				</div>
-				<img class="feed__list-item-image" src="./img/profiles/yoda/yoda-1.jpg" alt="Baby Yoda"/>
+				<!-- <img class="feed__list-item-image" src="./img/profiles/yoda/yoda-1.jpg" alt="Baby Yoda"/> -->
 				<div class="feed_list-item-interact">
 					<div>
 						<a href="#">
