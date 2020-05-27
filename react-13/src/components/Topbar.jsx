@@ -1,9 +1,19 @@
 import React from 'react';
 
-class Topbar extends React.Component {
-	render() {
-		return (<div />);
-	}
-}
+import { ReactComponent as LogoSvg } from "../assets/img/logo.svg";
 
-export default Topbar;
+class Topbar extends React.Component {
+  render() {
+    return (
+      <header className="topbar">
+      <div className="container">
+      <a href="/" className="topbar__logo">
+      <LogoSvg alt="Logo Instagram" />
+      </a>
+      </div>
+      </header>);
+    }
+  }
+  
+  export default Topbar;
+  

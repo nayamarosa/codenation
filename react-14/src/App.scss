@@ -129,7 +129,7 @@ button {
   margin: 0 8px;
   padding: 10px;
   white-space: nowrap;
-  
+
   & i {
     color: #9FA9BC;
     margin-top: -5px;
@@ -141,7 +141,7 @@ button {
   background-color: #4C84FF;
   border: 1px solid rgba(0, 0, 0, 0.1);
   color: #fff;
-  
+
   & i {
     color: #fff;
   }
@@ -173,7 +173,7 @@ button {
   margin-bottom: 20px;
   overflow: hidden;
   padding: 5px;
-  
+
   &:first-of-type {
     margin-bottom: 5px;
     background-color: transparent;
@@ -181,7 +181,12 @@ button {
     box-shadow: none;
     padding: 0 5px;
     font-weight: bold;
-    
+
+    & .contact__avatar {
+      height: 0;
+      border: none;
+    }
+
     .contact__data:nth-child(2) {
       color: #000;
     }
@@ -195,11 +200,7 @@ button {
   width: 35px;
   border: 2px solid #9FA9BC;
   margin-right: 10px;
-  
-  &:first-of-type {
-    border: none;
-  }
-  
+
   & img {
     height: 100%;
   }
