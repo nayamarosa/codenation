@@ -6,7 +6,6 @@ import './Contacts.scss'
 
 class Contacts extends React.Component {
   render() {
-    const { contacts } = this.props;
     return (
       <div className="container" data-testid="contacts">
         <section className="contacts">
@@ -19,7 +18,6 @@ class Contacts extends React.Component {
             <span className="contact__data">Empresa</span>
             <span className="contact__data">Departamento</span>
           </article>
-        {contacts.map((person) => <Contact data={person} key={person.id} />)}
         </section>
       </div>
       );
