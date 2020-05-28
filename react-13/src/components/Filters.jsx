@@ -5,7 +5,7 @@ import './Filters.scss'
 class Filters extends React.Component {
 	render() {
 		return (
-      <div className="container">
+      <div className="container" data-testid="filters">
         <section className="filters">
           <div className="filters__search">
             <input type="text" className="filters__search__input" placeholder="Pesquisar" />
