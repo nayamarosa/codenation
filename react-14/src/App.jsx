@@ -10,7 +10,9 @@ class App extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      contactsList: []
+      contactsList: [],
+      contactsListFiltered: [],
+      inputValue: ""
     }
   }
   
@@ -22,14 +24,41 @@ class App extends React.Component {
       this.setState({
         contactsList: data
       })
+      this.setState({
+        contactsListFiltered: this.state.contactsList
+      })
     })
   }
   
-  render() {
+  handleFilterChange = (e) => {
+    let getInputValue = e.target.value;
+    let contactsList = this.state.contactsList
+    
+    let filterInput = contactsList.filter(contact =>  
+      contact.name.toLowerCase().includes(getInputValue.toLowerCase())
+    )
+
+    this.setState({
+      getInputValue: e.target.value,
+      contactsListFiltered: filterInput
+    })
+  }
+  
+  // handleClick() {
+    
+    // }
+    
+    render() {
+      console.log(this.state.getInputValue);
+      console.log(this.state.contactsListFiltered);
+      console.log(this.state.filterInput);
+      // console.log(this.state.contactsList);
+      
+      
     return (
       <React.Fragment>
       <Topbar />
-      <Filters />
+      <Filters value={this.getInputValue} handleChange={this.handleFilterChange}/>
       <Contacts contacts={this.state.contactsList} />
       </React.Fragment>
       )
