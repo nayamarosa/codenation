@@ -4,15 +4,20 @@ import './Contacts.scss'
 
 class Contact extends React.Component {
   render() {
+
+    const { data } = this.props;
+    const formatDate = new Intl.DateTimeFormat('pt-BR', { year: 'numeric', month: '2-digit', day: '2-digit' });
+    const [{ value: yyyy },,{ value: mm },,{ value: dd }] = formatDate.formatToParts(new Date(data.admissionDate));
+
     return (
       <article className="contact" data-testid="contact">
-        <img className="contact__avatar" src={this.props.data.avatar} alt={this.props.data.name} />
-        <span className="contact__data">{this.props.data.name}</span>
-        <span className="contact__data">{this.props.data.phone}</span>
-        <span className="contact__data">{this.props.data.country}</span>
-        <span className="contact__data">{this.props.data.admissionDate}</span>
-        <span className="contact__data">{this.props.data.company}</span>
-        <span className="contact__data">{this.props.data.department}</span>
+        <img className="contact__avatar" data-testid="contact-avatar" src={data.avatar} alt={data.name} />
+        <span className="contact__data" data-testid="contact-name">{data.name}</span>
+        <span className="contact__data" data-testid="contact-phone">{data.phone}</span>
+        <span className="contact__data" data-testid="contact-country">{data.country}</span>
+        <span className="contact__data" data-testid="contact-date">{`${dd}/${mm}/${yyyy}`}</span>
+        <span className="contact__data" data-testid="contact-company">{data.company}</span>
+        <span className="contact__data" data-testid="contact-department">{data.department}</span>
       </article>
       );
     }

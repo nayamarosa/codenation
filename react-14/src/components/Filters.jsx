@@ -19,23 +19,23 @@ class Filters extends React.Component {
             </button>
           </div>
           
-          <button className="filters__item is-selected">
+          <button className="filters__item is-selected" value="name" onClick={this.props.handleClick}>
             Nome <i className="fas fa-sort-down" />
           </button>
           
-          <button className="filters__item">
+          <button className="filters__item" value="country" onClick={this.props.handleClick}>
             País <i className="fas fa-sort-down" />
           </button>
           
-          <button className="filters__item">
+          <button className="filters__item" value="company"  onClick={this.props.handleClick}>
             Empresa <i className="fas fa-sort-down" />
           </button>
           
-          <button className="filters__item">
+          <button className="filters__item" value="department" onClick={this.props.handleClick}>
             Departamento <i className="fas fa-sort-down" />
           </button>
           
-          <button className="filters__item">
+          <button className="filters__item" value="admissionDate" onClick={this.props.handleClick}>
             Data de admissão <i className="fas fa-sort-down" />
           </button>
         </section>

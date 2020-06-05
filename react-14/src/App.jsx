@@ -22,48 +22,62 @@ class App extends React.Component {
     .then(response => response.json())
     .then(data => {
       this.setState({
-        contactsList: data
-      })
-      this.setState({
-        contactsListFiltered: this.state.contactsList
+        contactsList: data,
+        contactsListFiltered: data
       })
     })
   }
   
   handleFilterChange = (e) => {
     let getInputValue = e.target.value;
-    let contactsListFiltered = this.state.contactsListFiltered
+    let contactsListFiltered = this.state.contactsListFiltered;
     
     let filterInput = contactsListFiltered.filter(contact =>  
       contact.name.toLowerCase().includes(getInputValue.toLowerCase())
-    )
-
-    this.setState({
-      getInputValue: e.target.value,
-      contactsList: filterInput
-    })
-  }
-  
-  // handleClick() {
+      )
+      
+      this.setState({
+        getInputValue: e.target.value,
+        contactsList: filterInput
+      })
+    }
     
-    // }
+    handleOrderClick = (e) => {
+      e.preventDefault();
+      let itemSelected = e.target;
+      let contactsList = this.state.contactsList;
+      
+      itemSelected.classList.add('is-selected');
+      
+      let orderList = contactsList.sort((prev, next) => {
+        if(prev[itemSelected.value] > next[itemSelected.value]){
+          return 1;
+        }
+        if(next[itemSelected.value] > prev[itemSelected.value]){
+          return -1;
+        }
+        return 0;
+      })
+      
+      this.setState({
+        contactsList: orderList
+      })
+    }
     
     render() {
-      console.log(this.state.getInputValue);
-      console.log(this.state.contactsList);
-
-    return (
-      <React.Fragment>
-      <Topbar />
-      <Filters
-        // value={this.getInputValue}
+      return (
+        <React.Fragment>
+        <div className="app" data-testid="app">
+        <Topbar />
+        <Filters
         handleChange={this.handleFilterChange}
-      
-      />
-      <Contacts contacts={this.state.contactsList} />
-      </React.Fragment>
-      )
+        handleClick={this.handleOrderClick}
+        />
+        <Contacts contacts={this.state.contactsList} />
+        </div>
+        </React.Fragment>
+        )
+      }
     }
-  }
-  
-  export default App;
+    
+    export default App;
