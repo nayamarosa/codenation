@@ -7,6 +7,7 @@ import './UserForm.scss';
 const UserForm = () => {
   return (
     <React.Fragment>
+      <SuccessMessage />
     </React.Fragment>
   );
 };

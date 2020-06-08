@@ -8,6 +8,7 @@ import './UsersList.scss';
 const UersList = ({ users }) => {
   return (
     <section className="users-list">
+      <User />
     </section>
   )
 };
