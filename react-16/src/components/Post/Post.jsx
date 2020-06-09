@@ -5,37 +5,58 @@ import './Post.scss';
 
 const Post = ({ postInfo, userInfo }) => {
   return (
-    <article className="post">
-      <div class="feed__list-item-header">
-        <a class="feed__profile" href="#">
-          <img class="feed__profile-image" src="./img/profiles/yoda/yoda-profile.jpg" alt="Mestre Yoda"/>
-          <p class="feed__profile-name">Mestre Yoda</p>
-        </a>
-        <a href="#">
-          <i class="feed__icon fas fa-ellipsis-h"></i>
-        </a>
-      </div>
-      <img class="feed__list-item-image" src="./img/profiles/yoda/yoda-1.jpg" alt="Baby Yoda"/>
-      <div class="feed__list-item-interact">
-        <div>
-          <a href="#">
-            <i class="feed__icon feed__icon--bigger far fa-heart"></i>
-          </a>
-          <a href="#">
-            <i class="feed__icon feed__icon--bigger far fa-comment"></i>
-          </a>
-        </div>
-        <a href="#">
-          <i class="feed__icon feed__icon--bigger far fa-bookmark"></i>
-        </a>
-      </div>
-      <div class="feed__list-item-footer">
-          <img class="feed__like-image" src="./img/profiles/domino/domino-profile.jpg" alt="Domino"/>
-          <p class="feed__like-text">
-            curtido por <a href="#"><span class="feed__like-text--bold">Domino </span></a>e outras <a href="#"><span class="feed__like-text--bold">7 pessoas</span></a>
-          </p>
-      </div>
-    </article>
+    <article className="post" data-testid="post">
+      {userInfo && (
+        <header className="post__header">
+          <div className="user">
+            <Link to={`/users/${userInfo.username}`} className="user__thumb">
+              <img src={userInfo.avatar} alt={userInfo.name} />
+            </Link>
+
+            <Link to={`/users/${userInfo.username}`} className="user__name">{userInfo.name}</Link>
+          </div>
+
+          <button
+            className="post__context"
+            onClick={() => toggleFollow(!follow)}
+          >
+            { follow
+              ? <span className="follow-btn is-following">{"Seguindo"}</span>
+              : <span className="follow-btn">{"Seguir"}</span>
+            }
+          </button>
+        </header>
+      )}
+
+      <figure className="post__figure">
+        <img src={imageUrl} alt="" />
+      </figure>
+
+      {userInfo && (
+        <nav className="post__controls">
+          <button
+            className="post__control"
+            onClick={() => setLike(!like)}
+          >
+            { like
+              ? <i className="fas fa-heart" />
+              : <i className="far fa-heart" />
+            }
+          </button>
+
+          {userInfo && comments.length > 0 && (
+            <div className="post__status">
+              <div className="user">
+                <span>curtido por <Link to="/" >{comments[0].name}</Link> e outra{((comments.length - 1) + like) > 1 && 's'} <Link to="/">
+                {(comments.length - 1) + like} pessoa{((comments.length - 1) + like) > 1 && 's'}.
+              </Link>
+            </span>
+              </div>
+            </div>
+          )}
+        </nav>
+      )}
+      </article>
   );
 };
 
