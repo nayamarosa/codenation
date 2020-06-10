@@ -9,7 +9,7 @@ import './Topbar.scss';
 const Topbar = () => (
   <header className="topbar" data-testid="topbar">
     <div className="container">
-			<Link to="/" class="topbar__logo">
+			<Link to="/" className="topbar__logo">
 				<LogoSvg alt="Instagram"/>
 			</Link>
       <div className="topbar__group ">
