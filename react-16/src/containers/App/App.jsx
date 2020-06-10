@@ -6,9 +6,6 @@ import Topbar from '../../components/Topbar';
 import Routes from '../../routes';
 
 import './App.scss';
-import Stories from '../Stories';
-import Posts from '../Posts';
-
 
 const App = () => (
   <div data-testid="app">

@@ -5,6 +5,21 @@ import Story from '../../components/Story';
 import './Stories.scss';
 
 const Stories = ({ stories, getUserHandler }) => {
+  const [showStory, toggleShowStory] = useState(false);
+  const [selectedStory, setSelectedHistory] = useState({});
+  const [selectedProfile, setSelectedProfile] = useState({});
+
+  const findStoryById = (id) => stories.find(story => story.id === id);
+
+  const handleStory = (story) => {
+    const foundStory = findStoryById(story.id);
+    const profileData = getUserHandler(story.userId);
+
+    setSelectedProfile(profileData);
+    setSelectedHistory(foundStory);
+    toggleShowStory(!showStory);
+  };
+
   return (
     <React.Fragment>
       <section className="stories" data-testid="stories">
