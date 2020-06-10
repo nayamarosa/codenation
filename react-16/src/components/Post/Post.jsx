@@ -4,6 +4,11 @@ import { Link } from 'react-router-dom';
 import './Post.scss';
 
 const Post = ({ postInfo, userInfo }) => {
+  const [like, setLike] = useState(false);
+  const [follow, toggleFollow] = useState(false);
+
+  const { comments, imageUrl } = postInfo;
+
   return (
     <article className="post" data-testid="post">
       {userInfo && (
